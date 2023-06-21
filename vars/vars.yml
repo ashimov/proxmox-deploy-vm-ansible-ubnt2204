@@ -1,0 +1,26 @@
+-
+  vmID: 0
+  hostname: your_hostname
+  cores: 4
+  memory: 8192
+  eth: ens19
+  ip: 192.168.1.2/24
+  nameserver: 8.8.8.8
+  gateway: 192.168.1.1
+  growsize: 35 #resize partition
+
+  #############################
+  
+  user_pasw: yourpassword 
+  root_pasw: yourpassword
+
+  #############################
+  netID: 1
+  root_disk: virtio0
+  templateID: 10000
+  default_storage: local-lvm
+  vmbr: vmbr0
+  net_type: virtio
+  diskID: 0
+  partID: 2
+  #############################
