@@ -167,12 +167,12 @@
     - name: Change password to root user
       shell: qm guest exec "{{ vmID }}" -- usermod --password $(echo "{{ root_pasw }}" | openssl passwd -1 -stdin) root
 
-    - name: debug message - Change password to sadmin (sudo) user
+    - name: debug message - Change password to username (sudo) user
       debug:
-        msg: qm guest exec {{ vmID }} -- usermod --password "{{ sadmin_pasw }}" sadmin
+        msg: qm guest exec {{ vmID }} -- usermod --password "{{ username_pasw }}" username
 
-    - name: Change password to sadmin (sudo) user
-      shell: qm guest exec "{{ vmID }}" -- usermod --password $(echo "{{ sadmin_pasw }}" | openssl passwd -1 -stdin) sadmin
+    - name: Change password to username (sudo) user
+      shell: qm guest exec "{{ vmID }}" -- usermod --password $(echo "{{ username_pasw }}" | openssl passwd -1 -stdin) username
 
 
       #############################################################################################
